@@ -7,6 +7,10 @@
     <script type="text/javascript" src="/easyrtc/easyrtc.js"></script>
     <script type="text/javascript" src="js/mylogic2.js"></script>
     <script type="text/javascript" src="js/demo_audio_only.js"></script>
+    <script type="text/javascript"
+        src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script>
+    <script type="text/javascript" src="js/screen-sharing-min.js"></script>
+
 </head>
 
 <body>
@@ -28,9 +32,16 @@
                 <button id="callAcceptButton">Accept</button> <button id="callRejectButton">Reject</button>
             </div> -->
         </div>
+
     </div>
     <br style="clear:both;" />
     <hr />
+</body>
+
+<body onload="init_api()">
+    <div id="screen-sharing" style="width:320px;height:240px;border: solid 1px"></div>
+    <input type="button" onclick="connectShareScreen();" value="Share Screen" />
+
 </body>
 <style type="text/css">
     #demoContainer {
